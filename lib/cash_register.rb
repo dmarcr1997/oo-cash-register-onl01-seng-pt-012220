@@ -69,3 +69,5 @@ Jake.add_item("fruit", 20, 4)
 puts Jake.items
 puts Jake.total
 puts Jake.apply_discount
+Jake.void_last_transaction
+puts Jake.items
