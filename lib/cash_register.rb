@@ -5,10 +5,10 @@ class CashRegister
   attr_reader :total, :last_transaction
   
   def initialize(discount = 0)
+    @discount = discount
     @items = []
     @last_transaction = {}
     @total = 0
-    @discount = discount
   end
   
   def add_item(title, price, quantity = 1)
@@ -27,7 +27,7 @@ class CashRegister
   
   def apply_discount
     if @discount == 0
-      return puts"There is no discount to apply."
+      puts"There is no discount to apply."
     else
       @discount.to_f
       @discount = @discount * 10**-2
@@ -36,7 +36,7 @@ class CashRegister
       return puts "After the discount, the total comes to $#{@total}."
     end
   end
-  
+  binding.pry
   def items
     @items
   end
