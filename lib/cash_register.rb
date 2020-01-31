@@ -2,7 +2,7 @@
 class CashRegister
   
   attr_accessor :total, :discount
-  attr_accessor :items, :last_transaction
+  attr_reader :items, :last_transaction
   
   def initialize(discount = 0)
     if discount == nil
@@ -13,6 +13,20 @@ class CashRegister
     @total = 0
     @items = []
     @last_transaction = []
+  end
+
+  def add_item(title, price, quantity = 1)
+    runn_count = 0
+    @last_transaction = [title, (price*quantity), quantity]
+    @total += (price*quantity)
+    if quantity > 1
+      while runn_count < quantity
+        @items << title
+        runn_count +=1
+      end
+    else
+      @items << title
+    end
   end
   
   def apply_discount
@@ -30,21 +44,7 @@ class CashRegister
   def items
     @items
   end
-  
-  def add_item(title, price, quantity = 1)
-    runn_count = 0
-    @last_transaction = [title, (price*quantity), quantity]
-    @total += (price*quantity)
-    if quantity > 1
-      while runn_count < quantity
-        @items << title
-        runn_count +=1
-      end
-    else
-      @items << title
-    end
-  end
-  
+
   def void_last_transaction
     run_count = 0
     @total -= @last_transaction[1] #price  
