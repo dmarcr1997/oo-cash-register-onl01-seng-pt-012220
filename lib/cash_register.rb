@@ -60,3 +60,4 @@ puts John.discount
 John.add_item("fruit", 20, 4)
 puts John.items
 puts John.total
+puts John.apply_discount
