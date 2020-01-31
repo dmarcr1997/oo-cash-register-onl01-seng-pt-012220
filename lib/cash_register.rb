@@ -10,7 +10,7 @@ class CashRegister
     @last_transaction = {}
     @total = 0
   end
-  
+  binding.pry
   def add_item(title, price, quantity = 1)
     count =0
     @total += price*quantity
