@@ -61,3 +61,11 @@ John.add_item("fruit", 20, 4)
 puts John.items
 puts John.total
 puts John.apply_discount
+
+
+Jake = CashRegister.new
+puts Jake.discount
+Jake.add_item("fruit", 20, 4)
+puts Jake.items
+puts Jake.total
+puts Jake.apply_discount
