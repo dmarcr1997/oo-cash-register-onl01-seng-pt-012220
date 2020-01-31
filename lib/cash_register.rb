@@ -16,7 +16,6 @@ class CashRegister
     @items
   end
   
-  binding.pry
   def add_item(title, price, quantity = 1)
     runn_count = 0
     @total += price*quantity
