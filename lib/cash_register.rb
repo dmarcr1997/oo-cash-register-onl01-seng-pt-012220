@@ -13,12 +13,12 @@ class CashRegister
   
   binding.pry
   def add_item(title, price, quantity = 1)
-    count = 0
+    runn_count = 0
     @total += price*quantity
     if quantity > 1
-      while count < quantity
+      while runn_count < quantity
         @items << title
-        count +=1
+        runn_count +=1
       end
     else
       @items << title
