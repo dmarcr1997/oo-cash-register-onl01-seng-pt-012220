@@ -28,7 +28,7 @@ class CashRegister
     end
     @last_transaction = [title, (price*quantity), quantity]
   end
-  binding.pry
+
   
   def apply_discount
     if @discount != 0 
@@ -57,4 +57,6 @@ end
 
 John = CashRegister.new(20)
 puts John.discount
+John.add_item("fruit", 20, 4)
+puts John.items
 
