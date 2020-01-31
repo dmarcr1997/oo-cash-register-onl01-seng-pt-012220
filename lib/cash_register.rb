@@ -59,4 +59,4 @@ John = CashRegister.new(20)
 puts John.discount
 John.add_item("fruit", 20, 4)
 puts John.items
-
+puts John.total
