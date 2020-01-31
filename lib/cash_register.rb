@@ -43,7 +43,7 @@ class CashRegister
       count = 0
       @total -=last_transaction[1]  
       while count < last_transaction[2]
-        item.      
+        item.delete[l]      
   end
   
 end
