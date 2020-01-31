@@ -38,5 +38,6 @@ class CashRegister
     @items
   end
   
+  def void
   
 end
