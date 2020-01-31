@@ -17,9 +17,10 @@ class CashRegister
     if quantity > 1
       while count < quantity
         @items << title
+        count +=1
       end
     end
-    @last_transaction = {title => (price*quantity)}
+    @last_transaction = [title, (price*quantity), quantity]
   end
   
   def apply_discount
@@ -39,7 +40,10 @@ class CashRegister
   end
   
   def void_last_transaction
-    
+      count = 0
+      @total -=last_transaction[1]  
+      while count < last_transaction[2]
+        
   end
   
 end
