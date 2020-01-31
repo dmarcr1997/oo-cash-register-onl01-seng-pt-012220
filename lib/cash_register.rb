@@ -71,4 +71,4 @@ puts Jake.total
 puts Jake.apply_discount
 Jake.void_last_transaction
 puts Jake.items
-puts Jake.price
+puts Jake.total
