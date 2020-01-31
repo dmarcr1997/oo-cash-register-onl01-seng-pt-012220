@@ -46,8 +46,6 @@ class CashRegister
     end
   end
   
-  binding.pry
-  
   
   def void_last_transaction
     run_count = 0
