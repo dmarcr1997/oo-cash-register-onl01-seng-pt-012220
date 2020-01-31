@@ -53,5 +53,8 @@ class CashRegister
       run_count +=1 
     end
   end
-  
 end
+
+John = CashRegister.new(20)
+John.discount
+
