@@ -56,5 +56,5 @@ class CashRegister
 end
 
 John = CashRegister.new(20)
-John.discount
+puts John.discount
 
