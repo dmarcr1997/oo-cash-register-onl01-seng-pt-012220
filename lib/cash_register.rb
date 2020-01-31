@@ -35,7 +35,6 @@ class CashRegister
     else
       real_discount = @discount.to_f * (10**-2)
       applied_dis = @total.to_f * real_discount
-      @total.to_f
       @total -= applied_dis
       return "After the discount, the total comes to $#{@total}."
     end
