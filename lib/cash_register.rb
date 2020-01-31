@@ -1,18 +1,18 @@
-require 'pry'
+
 class CashRegister
   
   attr_accessor :total, :discount
+  attr_accessor :items, :last_transaction
   
-  def initialize(dis = 0)
-    if dis == nil
-      self.discount = 0
+  def initialize(discount = 0)
+    if discount == nil
+      @discount = 0
     else
-      self.discount = dis
+      @discount = discount
     end
-    self.total = 0
+    @total = 0
     @items = []
-    @last_transaction = {}
-    
+    @last_transaction = []
   end
   
   def items
