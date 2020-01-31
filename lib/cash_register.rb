@@ -46,11 +46,11 @@ class CashRegister
   
   
   def void_last_transaction
-    count = 0
+    run_count = 0
     @total -=last_transaction[1]  
     while count < last_transaction[2]
       @items.delete(last_transaction[0])
-      count +=1 
+      run_count +=1 
     end
   end
   
