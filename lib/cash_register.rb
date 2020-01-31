@@ -33,28 +33,25 @@ class CashRegister
     @last_transaction = [title, (price*quantity), quantity]
   end
 
-  
   def apply_discount
-    if @discount != 0 
-      @discount.to_f
-      @discount = @discount * 10**-2
-      applied =  @total.to_f * @discount
-      @total -= applied
-      puts "After the discount, the total comes to $#{@total.to_f}."
-    else
+    if @discount == 0
       puts "There is no discount to apply."
-    end
-  end
-  
+    else
+      real_discount = @discount.to_f * (10**-1)
+      applied_dis = @total.to_f * real_discount
+      @total.to_f
+      @total -= applied_dis
+      puts ""
   
   def void_last_transaction
     run_count = 0
-    @total -= @last_transaction[1]  
-    while run_count < @last_transaction[2]
-      @items.delete(@last_transaction[0])
+    @total -= @last_transaction[1] #price  
+    while run_count < @last_transaction[2] #quantity
+      @items.delete(@last_transaction[0]) #item
       run_count +=1 
     end
   end
+  
 end
 
 John = CashRegister.new(20)
