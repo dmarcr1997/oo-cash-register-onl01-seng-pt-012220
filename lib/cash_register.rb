@@ -34,7 +34,7 @@ class CashRegister
   end
 
   
-  def apply_discount
+  def self.apply_discount
     if @discount != 0 
       @discount.to_f
       @discount = @discount * 10**-2
