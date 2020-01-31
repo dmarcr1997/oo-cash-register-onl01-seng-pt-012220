@@ -63,7 +63,7 @@ puts John.total
 puts John.apply_discount
 
 
-Jake = CashRegister.new
+Jake = CashRegister.new(nil)
 puts Jake.discount
 Jake.add_item("fruit", 20, 4)
 puts Jake.items
