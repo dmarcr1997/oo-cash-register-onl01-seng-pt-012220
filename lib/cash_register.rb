@@ -34,9 +34,9 @@ class CashRegister
     if @discount != 0 
       @discount.to_f
       @discount = @discount * 10**-2
-      applied =  @total * @discount
+      applied =  @total.to_f * @discount
       @total -= applied
-      puts "After the discount, the total comes to $#{@total}."
+      puts "After the discount, the total comes to $#{@total.to_f}."
     else
       puts "There is no discount to apply."
     end
