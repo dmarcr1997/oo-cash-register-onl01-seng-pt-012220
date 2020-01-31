@@ -40,10 +40,12 @@ class CashRegister
   end
   
   def void_last_transaction
-      count = 0
-      @total -=last_transaction[1]  
-      while count < last_transaction[2]
-        item.delete[l]      
+    count = 0
+    @total -=last_transaction[1]  
+    while count < last_transaction[2]
+      item.delete(last_transaction[0])
+      count +=1 
+    end
   end
   
 end
