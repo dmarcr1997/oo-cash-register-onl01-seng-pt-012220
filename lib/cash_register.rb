@@ -15,6 +15,18 @@ class CashRegister
     @last_transaction = []
   end
   
+  def apply_discount
+    if @discount == 0
+      puts "There is no discount to apply."
+    else
+      real_discount = @discount.to_f * (10**-2)
+      applied_dis = @total.to_f * real_discount
+      @total.to_f
+      @total -= applied_dis
+      puts "After the discount, the total comes to $#{@total}."
+    end
+  end
+  
   def items
     @items
   end
@@ -30,18 +42,6 @@ class CashRegister
       end
     else
       @items << title
-    end
-  end
-
-  def apply_discount
-    if @discount == 0
-      puts "There is no discount to apply."
-    else
-      real_discount = @discount.to_f * (10**-2)
-      applied_dis = @total.to_f * real_discount
-      @total.to_f
-      @total -= applied_dis
-      puts "After the discount, the total comes to $#{@total}."
     end
   end
   
