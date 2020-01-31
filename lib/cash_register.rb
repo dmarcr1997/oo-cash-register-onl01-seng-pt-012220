@@ -37,7 +37,7 @@ class CashRegister
     if @discount == 0
       puts "There is no discount to apply."
     else
-      real_discount = @discount.to_f*(10**-2)
+      real_discount = @discount.to_f * (10**-2)
       applied_dis = @total.to_f * real_discount
       @total.to_f
       @total -= applied_dis
@@ -53,7 +53,6 @@ class CashRegister
       run_count +=1 
     end
   end
-  
 end
 
 John = CashRegister.new(20)
