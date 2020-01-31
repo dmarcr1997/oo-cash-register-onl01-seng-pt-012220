@@ -41,7 +41,9 @@ class CashRegister
       applied_dis = @total.to_f * real_discount
       @total.to_f
       @total -= applied_dis
-      puts ""
+      puts "After the discount, the total comes to $#{@total}."
+    end
+  end
   
   def void_last_transaction
     run_count = 0
