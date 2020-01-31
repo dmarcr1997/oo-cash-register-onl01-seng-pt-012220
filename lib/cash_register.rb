@@ -32,10 +32,11 @@ class CashRegister
       @discount.to_f
       @discount = @discount * 10**-2
       applied =  @total * @discount
-      @total -=applied
-      return puts "After the discount, the total comes to $#{@total}."
+      @total -= applied
+      puts "After the discount, the total comes to $#{@total}."
     end
   end
+  
   binding.pry
   def items
     @items
