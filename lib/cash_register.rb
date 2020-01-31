@@ -19,6 +19,8 @@ class CashRegister
         @items << title
         count +=1
       end
+    else
+      @items << title
     end
     @last_transaction = [title, (price*quantity), quantity]
   end
