@@ -28,7 +28,7 @@ class CashRegister
     end
     @last_transaction = [title, (price*quantity), quantity]
   end
-  
+  binding.pry
   def apply_discount
     applied = 0
     if @discount != 0 
