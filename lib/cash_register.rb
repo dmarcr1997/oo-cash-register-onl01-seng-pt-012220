@@ -1,8 +1,7 @@
 require 'pry'
 class CashRegister
   
-  attr_accessor :total, :discount
-  attr_reader :last_transaction, :items
+  attr_accessor :total
   
   def initialize(discount = 0)
     @discount = discount
@@ -29,8 +28,8 @@ class CashRegister
     @last_transaction = [title, (price*quantity), quantity]
   end
   binding.pry
+  
   def apply_discount
-    applied = 0
     if @discount != 0 
       @discount.to_f
       @discount = @discount * 10**-2
